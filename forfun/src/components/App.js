@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
-import List from "./List";
+//import List from "./List";
 import Form from "./Form"
+import Movies from '../containers/movie-list'
 import '../App.css';
 
 class App extends Component {
@@ -15,7 +16,8 @@ class App extends Component {
         <div className="row mt-5">
           <div className="col-md-4 offset-md-1">
             <h2>Articles</h2>
-            <List />
+            {/* <List /> */}
+            <Movies />
           </div>
           <Form/>
         </div>

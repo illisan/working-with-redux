@@ -1,15 +1,10 @@
-import { ADD_ARTICLE } from "../constants/action-types";
-//rootREducer returns the initial state
+import {combineReducers} from "redux" 
+import MovieReducer from "./reducer-movies"
+import ListReducer from "./reducer-list" 
 
-const initialState = {
-    articles: []
-};
-const rootReducer = (state = initialState, action) => {
-    switch (action.type) {
-        case ADD_ARTICLE:
-            return { ...state, articles: [...state.articles, action.payload] }
-        default:
-            return state
-    }
-}
-export default rootReducer
+const allReducers = combineReducers({
+    articles: ListReducer,
+    movies: MovieReducer,
+}) 
+
+export default allReducers

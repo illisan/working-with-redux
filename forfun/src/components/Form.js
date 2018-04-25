@@ -53,7 +53,7 @@ class ConnectedForm extends Component {
                     SAVE
         </button>
             </form>
-        );
+        ); 
     }
 }
 
